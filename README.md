@@ -60,3 +60,9 @@ Therefore, full input code for *ai* would be `ac`, and
   also for better compatibility with Trime, who normally gives a distorted keyboard
   layout for terra-pinyin without proper configuration
 - [ ] Draw visual keymap
+
+## Credits
+
+This schema is heavily inspired by zaqzrh's [Tone-double_pinyin](https://github.com/zaqzrh/Tone-double_pinyin/)
+schema. I would like to fork it, but it does not provide a license, so I didn't
+risk doing so.
