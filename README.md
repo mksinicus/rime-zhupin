@@ -1,16 +1,20 @@
 # rime-zhupin
 
-A Rime schema that splits Mandarin syllables in the style of Zhuyin (Bopomofo), 
+A Rime schema that splits Mandarin syllables in the style of Zhuyin (Bopomofo),
 similar to Shuangpin (Double Pinyin) but require 3 instead of 2 keys for 
 syllables with a glide (For example, *zhuang*, *xian*).
 
 ## Dependencies
 
-- 地球拼音 ([terra_pinyin](https://github.com/rime/rime-terra-pinyin)) and its dependencies
+- 地球拼音 ([terra_pinyin](https://github.com/rime/rime-terra-pinyin)) and its 
+  dependencies
 
 ## Keymap
 
 Here only the differences from normal Pinyin schema will be listed. 
+
+Inputs with this schema are on the left, and their corresponding Pinyin on the
+right.
 
 ### Initials (声母)
 
@@ -35,10 +39,21 @@ Special combinations with regard to Zhuyin:
 
 - i + h: ing
 - u + h: ong
-- v + h: iong
+- v + h: iong (`[jqx]uh` = [jqx]iong)
 - i + n: in
 - u + n: un
 - v + n: &uuml;n
+- u + m: ui (**Pinyin *ui* cannot be accessed with `ui`!**)
+
+Please note that *&uuml;* preceeded by *j, q, x, y* are still reached 
+with `u` not `v`. This is not a 1:1 port of Zhuyin.
+
+### Tones (声调)
+
+- f: 1
+- r: 2
+- t: 3
+- y: 4
 
 ### Miscellaneous
 
@@ -50,19 +65,18 @@ Therefore, full input code for *ai* would be `ac`, and
 
 ## Known issues
 
-- Combinations *ju, qu, xu, yu* cannot be *jv, qv, xv, yv* at input
+- Combinations *ju, qu, xu, yu* cannot be *jv, qv, xv, yv* at input. But maybe 
+  this way is better, since `v` can stand for *zh*, an initial.
 
 ## Todos
 
 - [ ] Make a luna-pinyin compatible schema
-- [ ] Experimental: use not symbols, but letters not used for finals to mark tones
-  at input (optional, while normal terra-pinyin ones are preserved). This is 
-  also for better compatibility with Trime, who normally gives a distorted keyboard
-  layout for terra-pinyin without proper configuration
-- [ ] Draw visual keymap
+- [ ] Fork a schema that still use terra-pinyin-like tone markers
+- [ ] Draw a visual keymap
+- [ ] Handle `preedit` rules to show valid pinyin rather than the input
 
 ## Credits
 
 This schema is heavily inspired by zaqzrh's [Tone-double_pinyin](https://github.com/zaqzrh/Tone-double_pinyin/)
-schema. I would like to fork it, but it does not provide a license, so I didn't
+schema. I would like to fork it, but since it does not provide a license, I didn't
 risk doing so.
