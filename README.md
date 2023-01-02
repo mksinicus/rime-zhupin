@@ -65,8 +65,7 @@ Therefore, full input code for *ai* would be `ac`, and
 
 ## Known issues
 
-- Combinations *ju, qu, xu, yu* cannot be *jv, qv, xv, yv* at input. But maybe 
-  this way is better, since `v` can stand for *zh*, an initial.
+- Combinations *ju, qu, xu, yu* cannot be *jv, qv, xv, yv* at input. 
 
 ## Todos
 
