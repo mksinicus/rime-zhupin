@@ -57,7 +57,7 @@ speller:
   - derive/^([aoe])([ioun])([0-5])$/$1$1$2$3/
   - xform/^([aoe])(ng)?([0-5])$/$1$1$2$3/
   - xform/iu([0-5])$/IK$1/
-  - xform/(.)ei([0-5])$/$1M$1/
+  - xform/(.)ei([0-5])$/$1M$2/
   - xform/uan([0-5])$/UB$1/
   - xform/un([0-5])$/UN$1/
   - xform/^sh/U/
