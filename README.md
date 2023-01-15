@@ -29,11 +29,11 @@ right.
 - d: ao
 - g: ang
 - h: (e)ng
-- k: ou
-- c: ai
+- f: ou
+- x: ai
 - b: an
 - n: (e)n
-- m: ei
+- c: ei
 
 Special combinations with regard to Zhuyin:
 
@@ -50,10 +50,10 @@ with `u` not `v`. This is not a 1:1 port of Zhuyin.
 
 ### Tones (声调)
 
-- f: 1
-- r: 2
-- t: 3
-- y: 4
+- q: 1
+- w: 2
+- r: 3
+- t: 4
 
 ### Miscellaneous
 
