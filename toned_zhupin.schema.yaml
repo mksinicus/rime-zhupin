@@ -56,8 +56,8 @@ speller:
   - derive/^([jqxy])u$/$1v/
   - derive/^([aoe])([ioun])([0-5])$/$1$1$2$3/
   - xform/^([aoe])(ng)?([0-5])$/$1$1$2$3/
-  - xform/iu([0-5])$/IK$1/
-  - xform/(.)ei([0-5])$/$1M$2/
+  - xform/iu([0-5])$/IF$1/
+  - xform/(.)ei([0-5])$/$1C$2/
   - xform/uan([0-5])$/UB$1/
   - xform/un([0-5])$/UN$1/
   - xform/^sh/U/
@@ -67,9 +67,9 @@ speller:
   - xform/ie([0-5])$/Ie$1/
   - xform/([jqxy])iong([0-5])$/$1UH$2/
   - xform/ong([0-5])$/UH$1/
-  - xform/(uai)([0-5])$/UC$2/
+  - xform/(uai)([0-5])$/UX$2/
   - xform/(ing)([0-5])$/IH$2/
-  - xform/(.)ai([0-5])$/$1C$2/
+  - xform/(.)ai([0-5])$/$1X$2/
   - xform/(.)en([0-5])$/$1N$2/
   - xform/(.)eng([0-5])$/$1H$2/
   - xform/iang([0-5])$/IG$1/
@@ -77,7 +77,7 @@ speller:
   - xform/(.)ang([0-5])$/$1G$2/
   - xform/ian([0-5])$/iB$1/
   - xform/(.)an([0-5])$/$1B$2/
-  - xform/(.)ou([0-5])$/$1K$2/
+  - xform/(.)ou([0-5])$/$1F$2/
   - xform/(.)ao([0-5])$/$1D$2/
   - xform/ui([0-5])$/UM$1/
   - xform/in([0-5])$/IN$1/
@@ -85,10 +85,10 @@ speller:
   - abbrev/^(.).+$/$1/
   - derive/^([a-z]+)[0-5]$/$1/
   - 'xlit 1234 -;<\' # 不用 `/` 了
-  - 'derive/^(.*)-$/$1f/'
-  - 'derive/^(.*);$/$1r/'
-  - 'derive/^(.*)<$/$1t/'
-  - 'derive/^(.*)\\$/$1y/'
+  - 'derive/^(.*)-$/$1q/'
+  - 'derive/^(.*);$/$1w/'
+  - 'derive/^(.*)<$/$1r/'
+  - 'derive/^(.*)\\$/$1t/'
 
 translator:
   dictionary: terra_pinyin
