@@ -79,7 +79,7 @@ speller:
   - xform/(.)an([0-5])$/$1B$2/
   - xform/(.)ou([0-5])$/$1F$2/
   - xform/(.)ao([0-5])$/$1D$2/
-  - xform/ui([0-5])$/UM$1/
+  - xform/ui([0-5])$/UC$1/
   - xform/in([0-5])$/IN$1/
   - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
   - abbrev/^(.).+$/$1/
@@ -88,7 +88,7 @@ speller:
   - 'derive/^(.*)-$/$1q/'
   - 'derive/^(.*);$/$1w/'
   - 'derive/^(.*)<$/$1r/'
-  - 'derive/^(.*)\\$/$1t/'
+  - 'derive/^(.*)\\$/$1y/'
 
 translator:
   dictionary: terra_pinyin
