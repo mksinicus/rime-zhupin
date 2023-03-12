@@ -53,7 +53,7 @@ with `u` not `v`. This is not a 1:1 port of Zhuyin.
 - q: 1
 - w: 2
 - r: 3
-- t: 4
+- s: 4
 
 ### Miscellaneous
 
