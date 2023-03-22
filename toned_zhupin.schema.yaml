@@ -55,7 +55,6 @@ speller:
   initials: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
   algebra:
-  - derive/^([jqxy])u$/$1v/
   - derive/^([aoe])([ioun])([0-5])$/$1$1$2$3/
   - xform/^([aoe])(ng)?([0-5])$/$1$1$2$3/
   - xform/iu([0-5])$/IF$1/
