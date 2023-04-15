@@ -43,7 +43,7 @@ Special combinations with regard to Zhuyin:
 - i + n: in
 - u + n: un
 - v + n: &uuml;n
-- u + m: ui (**Pinyin *ui* cannot be accessed with `ui`!**)
+- u + c: ui (**Pinyin *ui* cannot be accessed with `ui`!**)
 
 Please note that *&uuml;* preceeded by *j, q, x, y* are still reached 
 with `u` not `v`. This is not a 1:1 port of Zhuyin.
