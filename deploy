@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+cp toned_zhupin.schema.yaml ~/.local/share/fcitx5/rime/
