@@ -69,10 +69,12 @@ Therefore, full input code for *ai* would be `ac`, and
 
 ## Todos
 
-- [ ] Make a luna-pinyin compatible schema
-- [ ] Fork a schema that still use terra-pinyin-like tone markers
+- [ ] IMPORTANT: A Chinese README
+- [ ] ~~Make a luna-pinyin compatible schema~~
+- [ ] ~~Fork a schema that still use terra-pinyin-like tone markers~~
 - [ ] Draw a visual keymap
-- [ ] Handle `preedit` rules to show valid pinyin rather than the input
+- [ ] ~~Handle `preedit` rules to show valid pinyin rather than the input~~
+      Aborted in favor of displaying Bopomofo
 
 ## Credits
 
