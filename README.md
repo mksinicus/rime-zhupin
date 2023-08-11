@@ -10,6 +10,12 @@ syllables with a glide (For example, _zhuang_, _xian_, _lüe_).
 
 - 地球拼音 ([terra_pinyin](https://github.com/rime/rime-terra-pinyin))
 
+## Usage | 用法
+
+Copy `toned_zhupin.schema.yaml` to your Rime user directory. Check the comments in the file in case of trouble.
+
+把 `toned_zhupin.schema.yaml` 复制到 Rime 用户目录。如遇问题，请按文件中的注释处理。
+
 ## Keymap | 键位
 
 Here only the differences from normal Pinyin schema will be listed. 
