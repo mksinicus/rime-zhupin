@@ -72,10 +72,12 @@ Therefore, full input code for *ai* would be `ax`, and
 
 ## Todos | 待办
 
+- [x] IMPORTANT: A Chinese README
 - [x] ~~Make a luna-pinyin compatible schema~~ aborted
 - [x] ~~Fork a schema that still use terra-pinyin-like tone markers~~ aborted
 - [ ] Draw a visual keymap
-- [x] ~~Handle `preedit` rules to show valid pinyin rather than the input~~ aborted in favor of showing Bopomofo
+- [ ] ~~Handle `preedit` rules to show valid pinyin rather than the input~~
+      Aborted in favor of displaying Bopomofo
 
 ## Credits | 致谢
 
