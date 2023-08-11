@@ -34,19 +34,23 @@ export def build [] {
 export alias b = build
 
 # move to Rime user dir.
-export def move [] {
-  # use std assert
+export def move [
+  --keep-backup (-k)
+] {
+  use std assert
   let pwd = pwd
   let file = 'toned_zhupin.schema.yaml'
+  assert ($file | path exists)
   cd $env.RIME_USER_DIR
-  try {
-    # assert (($file + '.bak') | path exists | not $in)
-    # Without `-f`, `mv` won't overwrite. `cp` will.
-    mv -v $file ($file + '.bak')
-  } catch {
-    match (input "bak file exists. Overwrite? (y/N) ") {
-      'y' => {mv -vf $file ($file + '.bak')}
-      _ => {error make {msg: "Aborted due to existing bak file"}}
+  if not $keep_backup {
+    try {
+      # Without `-f`, `mv` won't overwrite. `cp` will.
+      mv -v $file ($file + '.bak')
+    } catch {
+      match (input "bak file exists. Overwrite? (y/N) ") {
+        'y' => {mv -vf $file ($file + '.bak')}
+        _ => {error make {msg: "Aborted due to existing bak file"}}
+      }
     }
   }
   cp -v ($pwd | path join $file) .
