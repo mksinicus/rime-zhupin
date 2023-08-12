@@ -142,9 +142,9 @@ translator:
   - xform ^y ㄧ
   - xform ^w ㄨ
   # 处理零声母，添加等会删去的占位符
-  - xform ^a([dxbg]) \|$1
-  - xform ^e([cnh]) \|$1
-  - xform ^o([f]) \|$1
+  - xform ^a([adxbg]) \|$1
+  - xform ^e([ecnh]) \|$1
+  - xform ^o([of]) \|$1
   - xform (.)i $1ㄧ
   - xform (.)u $1ㄨ
   - xform (.)a $1ㄚ
