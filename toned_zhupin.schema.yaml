@@ -147,9 +147,10 @@ translator:
   - xform ^o([of]) \|$1
   - xform (.)i $1ㄧ
   - xform (.)u $1ㄨ
-  - xform (.)a $1ㄚ
-  - xform (.)o $1ㄛ
-  - xform (.)e $1ㄜ
+  # 这个没有歧义，删去要求以正确显示
+  - xform a $1ㄚ
+  - xform o $1ㄛ
+  - xform e $1ㄜ
   - xform (.)x $1ㄞ
   - xform (.)c $1ㄟ
   - xform (.)d $1ㄠ
