@@ -15,7 +15,7 @@ export def main [] {
 }
 
 # Git add, commit.
-export def gac [
+export def gacp [
   --message (-m): string
 ] {
   git diff
@@ -25,8 +25,9 @@ export def gac [
     'string' => {git commit -m $message}
     _ => {git commit}
   }
+  git push
 }
-export alias g = gac
+export alias g = gacp
 
 export def build [] {
   
