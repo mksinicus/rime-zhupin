@@ -25,6 +25,7 @@ export def gac [
     'string' => {git commit -m $message}
     _ => {git commit}
   }
+  git push
 }
 export alias g = gac
 
