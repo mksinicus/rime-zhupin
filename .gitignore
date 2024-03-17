@@ -2,3 +2,5 @@
 .pijul/
 copy-to*
 frequen*
+rime_user_dir
+*.tar.gz
