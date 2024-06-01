@@ -4,7 +4,7 @@
 schema:
   schema_id: toned_zhupin
   name: "帶調注拼"
-  version: "1.3"
+  version: "1.3.1"
   author:
   - mksinicus <marcuszhonggh@foxmail.com>
   description: |
@@ -107,6 +107,7 @@ translator:
   # 目前只能实现单字。双拼复用了字母，导致不好用正则划分音节；除非穷举。
   preedit_format:
   # 处理拼音中的特殊组合
+  - xform ^([iu])e$ $1ㄜ
   - xform ([iu])e $1ㄝ
   - xform ([nl]v)e $1ㄝ
   - xform eh ㄝ
