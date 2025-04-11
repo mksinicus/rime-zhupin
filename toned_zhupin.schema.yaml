@@ -4,7 +4,7 @@
 schema:
   schema_id: toned_zhupin
   name: "帶調注拼"
-  version: "1.3.1"
+  version: "2.0"
   author:
   - mksinicus <marcuszhonggh@foxmail.com>
   description: |
@@ -57,7 +57,8 @@ speller:
   algebra:
   # 给双元音的第一个元音字母增加重复的变种，喂给下面第一条规则
   # 使用 derive 来保持例如通过 ai 也可以和 ax 一样输入拼音 ai 的能力
-  - derive/^([aoe])([ioun])([0-5])$/$1$1$2$3/
+  # 2.0 打算取消这一点了，所以换成 xform
+  - xform/^([aoe])([ioun])([0-5])$/$1$1$2$3/
   ## 拆音节
   # 让拼音的零声母字以首字母作为“声母”，带来更流畅的连续输入音节划分（？）
   - xform/^([aoe])(ng)?([0-5])$/$1$1$2$3/
@@ -76,9 +77,14 @@ speller:
   - xform/(.)eng([0-5])$/$1H$2/
   # 处理带介母的字，在拼音中做了一定的缩写
   # 顺序需要注意，比如 iong 要在 ong 前被处理。
+  # v2.0: 使带介母的字中 [jqxy] 等于 [jqxy]i，不影响 [jqxy]i 单音节
+  - xform/([jqxy])iu([0-5])$/$1F$2/
+  - xform/([jqxy])in([0-5])$/$1N$2/
+  - xform/([jqxy])ing([0-5])$/$1H$2/
+  - xform/([jqxy])i(.)([0-5])$/$1$2$3/
   - xform/iu([0-5])$/IF$1/
   - xform/in([0-5])$/IN$1/
-  - xform/(ing)([0-5])$/IH$2/
+  - xform/ing([0-5])$/IH$1/
   - xform/ui([0-5])$/UC$1/
   - xform/un([0-5])$/UN$1/
   - xform/([jqxy])iong([0-5])$/$1UH$2/
@@ -111,6 +117,8 @@ translator:
   - xform ([iu])e $1ㄝ
   - xform ([nl]v)e $1ㄝ
   - xform eh ㄝ
+  # 带介母的
+  - xform ([jqx])([^iu]) $1ㄧ$2
   - xform ([jqx])u $1ㄩ
   - xform ([nl])v $1ㄩ
   - xform yi ㄧ

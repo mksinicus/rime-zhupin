@@ -59,6 +59,10 @@ with `u` not `v`. This is not a 1:1 port of Zhuyin.
 
 请注意：韵母 _ü_ 在与 _j, q, x, y_ 相接的情况仍通过 `u` 而非 `v` 来输入。
 
+v2.0: `[jqxy]` is now `[jqxy]i` by default when *i* here is a glide. For example, `jn` yields _jin_, `jf` yields _jiu_, `jaxg` yields _jia xiang_.
+
+v2.0: `[jqxy]` 开头的介母字默认带 i 介音。
+
 ### Tones | 声调
 
 - q: 1
