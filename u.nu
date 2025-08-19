@@ -10,6 +10,7 @@ export-env {
   )
 }
 
+# default function.
 export def main [] {
   # default function.
 }
@@ -34,7 +35,7 @@ export def build [] {
 }
 export alias b = build
 
-# move to Rime user dir.
+# move to local Rime user dir.
 export def move [
   --keep-backup (-k)
 ] {
@@ -57,3 +58,12 @@ export def move [
   cp -v ($pwd | path join $file) .
 }
 export alias m = move
+
+alias core-zip = zip
+# Compress for release
+export def zip [
+  filename: string
+] {
+  tar caf $filename toned_zhupin.schema.yaml UNLICENSE README.md
+}
+export alias z = zip

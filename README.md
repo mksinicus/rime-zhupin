@@ -50,6 +50,15 @@ This document lists only the differences from the standard Quanpin (Full Pinyin)
 - `vn`: _ün_
 - `uc`: _ui_
 
+### Tones | 声调
+
+- `q`: 1 ¯
+- `z`: 2 ´
+- `r`: 3 ˇ
+- `s`: 4 `
+
+## Changelog | 改动记录
+
 **v2.0**: Letters `j`, `q`, `x`, `y` now automatically include the glide _i_.
 
 **v2.0**: `j`, `q`, `x`, `y` 开头的音节默认带 _i_ 介音。
@@ -65,13 +74,6 @@ This document lists only the differences from the standard Quanpin (Full Pinyin)
 -   `hw`: _hu_
 -   `ww`: _wu_
 -   `yv`: _yu_
-
-### Tones | 声调
-
-- `q`: 1 ¯
-- `z`: 2 ´
-- `r`: 3 ˇ
-- `s`: 4 `
 
 ### Miscellaneous | 其他
 
