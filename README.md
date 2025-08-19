@@ -18,57 +18,60 @@ Copy `toned_zhupin.schema.yaml` to your Rime user directory. Check the comments 
 
 ## Keymap | 键位
 
-Here only the differences from normal Pinyin schema will be listed. 
+This document lists only the differences from the standard Quanpin (Full Pinyin) layout. Key: `Keystroke`: _Pinyin_.
 
-Inputs with this schema are on the left, and their corresponding Pinyin on the
-right.
-
-以下仅列出与拼音（全拼）输入方案相异的地方。左为键位，右为对应的拼音。
+本文仅列出与拼音（全拼）输入方案的不同之处。左为键位，右为对应的拼音。
 
 ### Initials | 声母
 
-- v: zh
-- i: ch
-- u: sh
+- `v`: _zh_
+- `i`: _ch_
+- `u`: _sh_
 
 ### Finals | 韵母
 
-- d: ao
-- g: ang
-- h: (e)ng
-- f: ou
-- x: ai
-- b: an
-- n: (e)n
-- c: ei
+- `w`: _u_
+- `d`: _ao_
+- `g`: _ang_
+- `h`: _(e)ng_
+- `f`: _ou_
+- `x`: _ai_
+- `b`: _an_
+- `n`: _(e)n_
+- `c`: _ei_
 
-Special combinations with regard to Zhuyin:
+### Special Rules for Glides | 介音特殊规则
 
-以下是与注音相对应的稍特殊的组合：
+- `ih`: _ing_
+- `uh`: _ong_
+- `vh`: _iong_ (`yvh`: _yong_)
+- `in`: _in_
+- `un`: _un_
+- `vn`: _ün_
+- `uc`: _ui_
 
-- i + h: ing
-- u + h: ong
-- v + h: iong (`[jqx]uh` = [jqx]iong)
-- i + n: in
-- u + n: un
-- v + n: &uuml;n
-- u + c: ui
+**v2.0**: Letters `j`, `q`, `x`, `y` now automatically include the glide _i_.
 
-Please note that _ü_ preceeded by _j, q, x, y_ are still reached 
-with `u` not `v`. This is not a 1:1 port of Zhuyin.
+**v2.0**: `j`, `q`, `x`, `y` 开头的音节默认带 _i_ 介音。
 
-请注意：韵母 _ü_ 在与 _j, q, x, y_ 相接的情况仍通过 `u` 而非 `v` 来输入。
+- `qn`: _qin_
+- `jaxg`: _jia xiang_
 
-v2.0: `[jqxy]` is now `[jqxy]i` by default when *i* here is a glide. For example, `jn` yields _jin_, `jf` yields _jiu_, `jaxg` yields _jia xiang_.
+**v3.0**: The vowel `u` is now consistently input as `w` (joining the zero-initials `a`, `e`, `o`). The vowel `ü` (in `ju`, `qu`, `xu`, `yu`) is now consistently input as `v`. This change redistributes typing load more evenly between hands by assigning more frequent keys to the left hand, and frees the `u` key from representing multiple sounds (`sh`, `u`, `ü`).
 
-v2.0: `[jqxy]` 开头的介母字默认带 i 介音。
+**v3.0**: 元音 `u` 现统一使用 `w` 输入（与零声母 `a`, `e`, `o` 规则一致）； `ju`, `qu`, `xu`, `yu` 中的元音 `ü`  现统一使用 `v` 输入。这一变动从平衡双手击键负荷的角度出发，将更常用的键位分配给左手，规避了 `u` 键身兼多职（代表 _sh_、_u_、_ü_ 三个音）的情况。
+
+-   `hwg`: _huang_
+-   `hw`: _hu_
+-   `ww`: _wu_
+-   `yv`: _yu_
 
 ### Tones | 声调
 
-- q: 1
-- w: 2
-- r: 3
-- s: 4
+- `q`: 1 ¯
+- `z`: 2 ´
+- `r`: 3 ˇ
+- `s`: 4 `
 
 ### Miscellaneous | 其他
 
@@ -86,7 +89,7 @@ Therefore, full input code for *ai* would be `ax`, and
 - [x] ~~Make a luna-pinyin compatible schema~~ aborted
 - [x] ~~Fork a schema that still use terra-pinyin-like tone markers~~ aborted
 - [ ] Draw a visual keymap
-- [ ] ~~Handle `preedit` rules to show valid pinyin rather than the input~~
+- [x] ~~Handle `preedit` rules to show valid pinyin rather than the input~~
       Aborted in favor of displaying Bopomofo
 
 ## Credits | 致谢
